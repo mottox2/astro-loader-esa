@@ -54,8 +54,8 @@ You can use the single like this: `src/page/posts/[number].astro`
 ```astro
 ---
 export const getStaticPaths: GetStaticPaths = async () => {
-	const items = await getCollection("esaPosts");
-	return items.map((item) => ({ params: { number: item.data.number } }));
+  const items = await getCollection("esaPosts");
+  return items.map((item) => ({ params: { number: item.data.number } }));
 };
 
 const { number } = Astro.params;
