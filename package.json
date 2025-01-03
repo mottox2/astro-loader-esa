@@ -3,27 +3,29 @@
   "version": "0.0.1",
   "type": "module",
   "files": [
-    "dist",
-    "index.d.ts"
+    "dist"
   ],
   "main": "./dist/esa-loader.umd.cjs",
   "module": "./dist/esa-loader.js",
-  "types": "./index.d.ts",
+  "types": "./dist/index.d.ts",
   "exports": {
-    "types": "./index.d.ts",
+    "types": "./dist/index.d.ts",
     "import": "./dist/esa-loader.js",
     "require": "./dist/esa-loader.umd.cjs"
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "prebuild": "tsc lib/index.ts --declaration --emitDeclarationOnly --outDir ."
+    "build": "vite build && tsc"
   },
   "devDependencies": {
     "@astrojs/markdown-remark": "^6.0.1",
     "astro": "^5.1.2",
     "typescript": "~5.7.2",
     "vite": "^6.0.1"
+  },
+  "peerDependencies": {
+    "@astrojs/markdown-remark": "^6.0.0",
+    "astro": "^5.0.0"
   },
   "packageManager": "pnpm@9.13.2"
 }

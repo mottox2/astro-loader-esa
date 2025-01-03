@@ -8,7 +8,7 @@ export default defineConfig({
       fileName: 'esa-loader',
     },
     rollupOptions: {
-      external: ['astro', '@astrojs/markdown-remark'],
+      external: ['astro/zod', '@astrojs/markdown-remark'],
     }
   },
 })
