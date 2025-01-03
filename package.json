@@ -1,26 +1,29 @@
 {
   "name": "astro-loader-esa",
-  "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "files": [
     "dist",
     "index.d.ts"
   ],
-  "main": "./dist/counter.umd.cjs",
-  "module": "./dist/counter.js",
+  "main": "./dist/esa-loader.umd.cjs",
+  "module": "./dist/esa-loader.js",
   "types": "./index.d.ts",
   "exports": {
     "types": "./index.d.ts",
-    "import": "./dist/counter.js",
-    "require": "./dist/counter.umd.cjs"
+    "import": "./dist/esa-loader.js",
+    "require": "./dist/esa-loader.umd.cjs"
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build"
+    "build": "tsc && vite build",
+    "prebuild": "tsc lib/index.ts --declaration --emitDeclarationOnly --outDir ."
   },
   "devDependencies": {
+    "@astrojs/markdown-remark": "^6.0.1",
+    "astro": "^5.1.2",
     "typescript": "~5.7.2",
     "vite": "^6.0.1"
-  }
+  },
+  "packageManager": "pnpm@9.13.2"
 }
