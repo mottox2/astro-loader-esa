@@ -1,6 +1,6 @@
 {
   "name": "astro-loader-esa",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "files": [
     "dist"
@@ -15,7 +15,8 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build && tsc"
+    "build": "vite build && tsc",
+    "prepare": "pnpm build"
   },
   "devDependencies": {
     "@astrojs/markdown-remark": "^6.0.1",
