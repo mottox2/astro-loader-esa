@@ -14,7 +14,7 @@ First, you need to create a new Personal Access Token in your esa.io account. Yo
 
 Next, You can find this by looking at the URL of your esa.io team. For example, if your team URL is `https://your-team.esa.io`, then your team name is `your-team`.
 
-Finally, you need to add the following to your `astro.config.mjs` file:
+Finally, you need to add the following to your `src/content.config.ts` file:
 
 ```javascript
 import { defineCollection } from "astro:content";
@@ -29,6 +29,8 @@ const esaPosts = defineCollection({
     },
   }),
 });
+
+export const collections = { esaPosts, qiitaPosts, notePosts };
 ```
 
 ## Example
