@@ -24,13 +24,14 @@ const esaPosts = defineCollection({
   loader: esaLoader({
     accessToken: getSecret("ESA_ACCESS_TOKEN"),
     teamName: getSecret("ESA_TEAM_NAME"),
+    // https://docs.esa.io/posts/102#URI%E3%82%AF%E3%82%A8%E3%83%AA%E6%96%87%E5%AD%97%E5%88%97-2
     params: {
       q: "wip:false",
     },
   }),
 });
 
-export const collections = { esaPosts, qiitaPosts, notePosts };
+export const collections = { esaPosts };
 ```
 
 ## Example
