@@ -2,6 +2,10 @@
   "name": "astro-loader-esa",
   "version": "0.0.4",
   "type": "module",
+  "keywords": [
+    "astro-loader",
+    "withastro"
+  ],
   "files": [
     "dist"
   ],
